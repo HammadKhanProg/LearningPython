@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="form">
+        {% csrf_token %}
+        <div class="form-wrapper">
+            <h1 class="color-yellow">Contact Us</h1>
+            <div class="form-group">
+                <label for="user" class="color-yellow">number 1</label>
+                <input type="text" name="num1" value="{{n1}}" id="user" placeholder="Type first number" required>
+            </div>
+            <div class="form-group">
+                <label for="Password" class="color-yellow">number 2</label>
+                <input type="text" name="num2" value="{{n2}}" id="Password" placeholder="Type second number" required>
+            </div>
+            <input type="submit" class="sub-btn" value="Submit">
+            <input type="text" name="" id="" value="{{finalans}}">
+        </div>
+    </form>
+</body>
+</html>

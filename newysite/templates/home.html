@@ -1,0 +1,52 @@
+{% include "header.html" %}
+    <div class="header-content">
+        <h1 class="color-white">lets travel the world</h1>
+        <p class="color-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#explore" class="btn btn-primary color-yellow md-head">Explore</a>
+    </div>
+    </header>
+
+    <section class="showcase" id="explore">
+        <div class="container">
+            <div class="row row1 ">
+                <div class="img-box">
+                    <img src="/static/images/Pakistan.jpg" alt="">
+                </div>                                
+                <div class="text-box color-black md-head">
+                    <h1 class="color-yellow">swat, Pakistan</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti quisquam .</p>
+                </div>
+                <a href="#" class="btn btn-secondary color-yellow">More</a>
+            </div>
+            <div class="row row2">
+                <div class="img-box">
+                    <img src="/static/images/Turkey.jpg" alt="">
+                </div>                                
+                <div class="text-box color-black md-head">
+                    <h1 class="color-yellow">Ankara, Turkey</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti quisquam dolor.</p>
+                </div>
+                <a href="#" class="btn btn-secondary color-yellow">More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <form action="">
+                <input type="text" name="servicetitle" id="">
+                <input type="submit" value="Search">
+            </form>
+            <div class="box-wrapper">
+                <div class="box box-1 bg-color">
+                    {% for n in servicedata %}
+                        <h1>{{n.service_title | safe | upper}}</h1>
+                        <p>{{n.service_des | safe | title}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer.html" %}
+</body>
+</html>
